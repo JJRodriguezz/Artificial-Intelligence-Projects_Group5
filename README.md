@@ -1,5 +1,6 @@
 # Inteligencia Artificial - Grupo 5
 ## Semestre 2025-2
+### Universidad EAFIT
 
 ### Descripción
 
@@ -7,7 +8,7 @@ Este repositorio contiene todos los proyectos y ejercicios desarrollados por el 
 
 ### Información del Grupo
 
-- **Curso:** Inteligencia Artificial
+- **Curso:** Introducción a la Inteligencia Artificial
 - **Grupo:** 5
 - **Horario:** Viernes 12-3
 - **Semestre:** 2025-2
@@ -20,8 +21,8 @@ El repositorio incluye las implementaciones, análisis y documentación de todos
 
 - Isabella Idarraga
 - Juan Jose Rodriguez
-- Diego Gonzalez
+- Diego Andres Gonzalez
 
 ---
 
-*Desarrollado como parte del curso de Inteligencia Artificial - Grupo 5 - Semestre 2025-2*
+*Desarrollado como parte del curso de Introducción a la Inteligencia Artificial - Grupo 5 - Semestre 2025-2*
