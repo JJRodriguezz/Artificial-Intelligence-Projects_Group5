@@ -1,12 +1,14 @@
 # Sistema de Navegación en Red de Metro
 
-## Descripción del Proyecto
+## Contexto del Problema:
 
-Este proyecto implementa un sistema de navegación para una red de metro que permite encontrar la ruta más corta entre dos estaciones utilizando dos algoritmos de búsqueda diferentes: **Breadth-First Search (BFS)** e **Iterative Deepening Search (IDS)**. El sistema está diseñado para ayudar a los pasajeros a encontrar la ruta óptima con el menor número de paradas entre estaciones.
+Como desarrollador de la alcaldía de una importante ciudad, se le solicita implementar un algoritmo que permita a los pasajeros encontrar la ruta más corta entre dos estaciones del
+metro usando dos estrategias diferentes **(Breadth-First Search (BFS) e Iterative Deepening Search (IDS))**. Se le suministrará un mapa de la red de metro, y debe determinar la ruta con menos acciones (estaciones de parada) entre dos estaciones usando BFS e IDS.
+
 
 ## Mapa de la Red de Metro
 
-La red de metro consta de **10 estaciones** conectadas de la siguiente manera:
+La red de metro cuenta con **10 estaciones** conectadas de la siguiente forma:
 
 ```
      A
@@ -34,14 +36,22 @@ G H I ---- J
 ## Definición del Problema
 
 ### Estados y Componentes
-- **Estado Inicial**: La estación donde comienza el pasajero
-- **Estado Objetivo**: La estación destino
-- **Acciones**: Moverse a cualquier estación conectada directamente
-- **Espacio de Estados**: Todas las posibles combinaciones de estaciones y movimientos
-- **Modelo de Transición**: Estado resultante después de moverse entre estaciones
-- **Costo**: Uniforme entre todas las estaciones (1 por cada movimiento)
+**1. Estado Inicial:** La estación donde comienza el pasajero.
 
-## Clases Importantes
+**2. Estado Objetivo:** La estación a la que el pasajero quiere llegar.
+
+**3. Acciones:** Desde cada estación, el pasajero puede moverse a
+cualquier estación conectada directamente.
+
+**4. Espacio de Estados:** Todas las posibles combinaciones de estaciones
+y movimientos entre ellas.
+
+**5. Modelo de Transición:** El estado resultante después de moverse de
+una estación a otra.
+
+**6. Costo**: Uniforme entre todas las estaciones (1 por cada movimiento)
+
+## Clases en el código
 
 ### Clase `Node`
 Representa un nodo en el árbol de búsqueda:
@@ -153,7 +163,7 @@ A → C → F → J
 ## Conclusiones
 
 ### Ventajas del BFS
-- Explora menos nodos totales
+- Explora menos nodos 
 - No repite exploraciones
 - Comportamiento consistente
 - Siempre encuentra la ruta más corta
@@ -164,24 +174,24 @@ A → C → F → J
 - Puede interrumpirse en cualquier momento
 
 
-### Diferencias Clave
+### Diferencias Clave (Porcentajes calculados según resultados en mi dispositivo)
 
-1. **Exploración de Nodos**: BFS explora significativamente menos nodos que IDS. IDS explora entre 50% y 200% más nodos debido a que re-explora nodos en cada iteración de profundidad menor.
+1. **Exploración de Nodos**: BFS explora significativamente menos nodos que IDS. IDS explora entre 50% y 200% más nodos porque re-explora nodos en cada iteración de profundidad menor.
 
-2. **Uso de Memoria**: IDS utiliza aproximadamente 81% menos memoria que BFS (1.07 KB vs 5.69 KB) porque solo mantiene el camino actual en lugar de toda la frontera.
+2. **Uso de Memoria**: IDS utiliza aproximadamente 81% menos memoria que BFS (1.07 KB vs 5.69 KB) porque mantiene el camino actual, no toda la frontera.
 
-3. **Tiempo de Ejecución**: BFS es aproximadamente 26% más rápido (0.000734s vs 0.000989s) porque no tiene la sobrecarga de reiniciar la búsqueda en cada iteración.
+3. **Tiempo de Ejecución**: BFS es aproximadamente 26% más rápido (0.000734s vs 0.000989s) porque no tiene que reiniciar la búsqueda en cada iteración.
 
-4. **Iteraciones de Profundidad**: IDS necesitó 4 iteraciones para encontrar la solución A → J, explorando profundidades 0, 1, 2, y finalmente encontrando la solución en profundidad 3.
+4. **Iteraciones de Profundidad**: IDS hizo 4 iteraciones para encontrar la solución A → J, exploró profundidades 0, 1, 2, y despues encontró la solución en profundidad 3.
 
 5. **Aplicabilidad Práctica**: 
-   - **BFS es mejor** para grafos pequeños a medianos donde la memoria no es limitante y se requiere eficiencia temporal
-   - **IDS es mejor** para grafos grandes o cuando la memoria es muy limitada y se puede tolerar mayor exploración de nodos
+   - **BFS es mejor** para grafos pequeños o medianos donde la memoria no este limitada y se requiera resolver en menor tiempo
+   - **IDS es mejor** para grafos grandes o cuando la memoria es muy limitada y permita mayor exploración de nodos
 
 
 ### Funcionalidades
 1. **Comparación principal**: Ejecuta BFS e IDS para la ruta A → J
 2. **Análisis de múltiples rutas**: Prueba diferentes combinaciones de origen-destino
 3. **Métricas de rendimiento**: Tiempo, memoria, nodos explorados
-4. **Visualización de resultados**: Salida formateada con análisis comparativo
+4. **Visualización de resultados**: Salida con análisis comparativo
 
