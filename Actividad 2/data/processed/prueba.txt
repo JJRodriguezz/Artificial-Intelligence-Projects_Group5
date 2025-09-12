@@ -1,0 +1,1 @@
+Archivo para borrar, en esta carpeta va el csv limpio
