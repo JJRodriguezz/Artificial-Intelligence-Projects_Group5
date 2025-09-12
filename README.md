@@ -10,7 +10,7 @@ This repository contains all the projects and exercises developed by **Group 5**
 
 - **Course:** Introduction to Artificial Intelligence  
 - **Group:** 5  
-- **Schedule:** Fridays 12-3  
+- **Schedule:** Friday 12-3  
 - **Semester:** 2025-2  
 
 ### Content
