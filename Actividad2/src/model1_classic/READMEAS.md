@@ -48,9 +48,9 @@ R² Score: 0.9986 (prácticamente perfecto)
 
 El kernel linear demostró ser increíblemente efectivo. ¿Por qué? Porque las relaciones entre las ventas regionales y las globales son esencialmente lineales (las globales son la suma de las regionales). A veces la solución más simple es la mejor.
 
-#### Los Perdedor (descartados): Poly
+### Los Perdedor (descartado): Poly
 
-Kernel Polynomial:
+#### Kernel Polynomial:
 
 - R² de -48.6 (resultado negativo) lo cual concluimos que era un resultado desastroso y decidimos descartarlo.
 
